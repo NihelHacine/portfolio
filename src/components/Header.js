@@ -21,7 +21,7 @@ function Header() {
 </main>
   <div className='btn'> 
   <a href="#contact" className='btn-a'>Contact me</a>
-  <a className='btn-a'> CV-DOWNLOAD </a>
+  <a className='btn-a' href="cv.pdf"> CV-DOWNLOAD </a>
  </div>
     </div>
 
