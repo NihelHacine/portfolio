@@ -1,31 +1,67 @@
-import { Link, NavLink } from 'react-router-dom'
-import '../Navbarr.css'
-import About from './About'
+import React, { useState } from "react";
+import "../Navbarr.css";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 function Navbarr() {
-    
-  return (
-    
-        <nav className="navbar fixed-top shadow-sm navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-lg-5">
-        <a href="index.html" className="navbar-brand ml-lg-3">
-          <h1 className="m-0 display-5"><span style={{color:'#0BCEAF'}}>Nihel</span>Hacine</h1>
-        </a>
-        <button type="button" className="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-          <span className="navbar-toggler-icon" />
-        </button>
-        <div className="collapse navbar-collapse px-lg-3" id="navbarCollapse">
-          <div className="navbar-nav m-auto py-0">
-            <a href="#home" className="nav-item nav-link active">Home</a>
-            <a href="#about" className="nav-item nav-link" smooth>About</a>
-            <a href="#certif" className="nav-item nav-link">Qualifications</a>
-            <a href="#portfolio" className="nav-item nav-link">Portfolio</a>
-            <a href="#contact" className="nav-item nav-link">Contact</a>
-          </div>
-          {/* <a href className="btn btn-outline-primary d-none d-lg-block">Hire Me</a> */}
-        </div>
-      </nav>
 
-  )
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const closeMenu = () => setMenuOpen(false);
+
+  return (
+    <nav className="navbar">
+
+      <a href="#home" className="logo">
+        <span>Nihel</span>Hacine
+      </a>
+
+      <ul className={menuOpen ? "nav-links active" : "nav-links"}>
+
+        <li>
+          <a href="#home" onClick={closeMenu}>
+            Home
+          </a>
+        </li>
+
+        <li>
+          <a href="#about" onClick={closeMenu}>
+            About
+          </a>
+        </li>
+
+        <li>
+          <a href="#certif" onClick={closeMenu}>
+            Qualifications
+          </a>
+        </li>
+
+        <li>
+          <a href="#portfolio" onClick={closeMenu}>
+            Projects
+          </a>
+        </li>
+
+        <li>
+          <a href="#contact" onClick={closeMenu}>
+            Contact
+          </a>
+        </li>
+
+      </ul>
+
+      <a href="cv.pdf" className="cv-btn">
+        Download CV
+      </a>
+
+      <button
+        className="menu-btn"
+        onClick={() => setMenuOpen(!menuOpen)}
+      >
+        {menuOpen ? <FaTimes /> : <FaBars />}
+      </button>
+
+    </nav>
+  );
 }
 
-export default Navbarr
+export default Navbarr;

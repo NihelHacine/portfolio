@@ -1,0 +1,172 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Architects Daughter';
+
+}
+.header{
+   display: flex;
+   justify-content: space-around; 
+   width: 100%;
+   height: 70px;
+   position: sticky;
+   top: 0;
+   background-color: hsla(0,0%,100%,.98);
+
+}
+.portfolio-link{
+text-decoration: none;
+}
+.header label{
+    color: red;
+}
+.header h3{
+    padding-top: 20px;
+
+}
+.menu ul{
+    display: flex;
+    list-style: none;
+    padding: 10px;
+    
+}
+.menu ul li{
+    margin: 10px;
+}
+.menu ul li a{
+    text-decoration: none;
+    color:#747474;
+    font-weight: bold;
+}
+.main{
+    background-color: black;
+    width: 100%;
+    height: 550px;
+
+}
+.contain {
+    width: 75%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    
+}
+.col1{
+    margin-top: 20%;
+}
+.col1 h1{
+    color: bisque;
+    font-size: 46px;
+}
+.col1 label{
+    color: goldenrod;
+    font-weight: bold;
+}
+.col1 p{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: white;
+}
+.col1 a{
+    text-decoration: none;
+    color: goldenrod;
+    font-weight: bold;
+    font-size: 20px;
+
+}
+.col2{
+    height: 550px;
+}
+.col2 img {
+    width: auto;
+    height: 550px;
+    border-radius: 20px;
+    position: absolute; 
+    bottom: 0;
+    right: 0;
+}
+.apropos{
+    display: flex;
+    width: 80%;
+    margin: auto;
+    justify-content: space-between;
+}
+.apropos-col1 img{
+    margin-top: -100px;
+    ;
+}
+.apropos-col2{
+    padding: 100px;
+}
+.apropos-col2 h1{
+    color: #747474;
+}
+.apropos-col2 p{
+    padding-top: 20px;
+}
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+.fa {
+    
+        padding: 10px;
+        font-size: 30px;
+        width: 30px;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 50%;     
+  }
+  
+  .fa:hover {
+      opacity: 0.7;
+  }
+  
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+
+  .fa-instagram {
+    background: #d62976 ;
+    color: white;
+  }
+  .fa-linkedin {
+    background: #007bb5;
+    color: white;
+  }
+  .fa-github {
+    background: black;
+    color: white;
+  }
+.title-service{
+    text-align: center;
+    padding-top: 30px;
+    color: red;
+
+    
+}
+.services-bloc{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    width: 75%;
+    margin: auto;
+    height: 550px;
+}
+.service{
+transition: 1s;
+}
+.service:hover{
+    transform:scale(1.1);
+}
+.service img{
+    border-radius: 30px;
+    width:300px;
+    height:200px;
+}

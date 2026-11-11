@@ -1,126 +1,121 @@
-import React from 'react'
-import '../Certif.css'
-import { Fade } from 'react-awesome-reveal'
 
+import React from 'react';
+import '../Certif.css';
+import { Fade } from 'react-awesome-reveal';
 
 function Certif() {
+
+  const certifications = [
+    {
+      date: 'August 2023',
+      type: 'Professional Training',
+      icon: '🎓',
+      title: 'GOMYCODE',
+      description:
+        'GOMYCODERS Onboarding & Training: Welcoming, Teaching Philosophy, Learn and Teach.',
+    },
+    {
+      date: 'July 2023',
+      type: 'Web Development',
+      icon: '💻',
+      title: 'GOMYCODE',
+      description:
+        'Full Stack JavaScript Web Bootcamp: React.js, Node.js and Express.js.',
+    },
+    {
+      date: 'May 2023',
+      type: 'Digital Skills',
+      icon: '🚀',
+      title: 'INCO Academy / Minassa',
+      description:
+        'Go Into Tech Bootcamp: WordPress, SEO Audit, Digital Marketing and Web Design.',
+    },
+    {
+      date: 'September 2020',
+      type: 'Master Degree',
+      icon: '🏆',
+      title: 'Institut Supérieur de Gestion de Gabès',
+      description:
+        "Master's Degree in E-Commerce.",
+    },
+    {
+      date: 'May 2016',
+      type: "Bachelor's Degree",
+      icon: '📚',
+      title: 'Institut Supérieur de Gestion de Gabès',
+      description:
+        "Bachelor's Degree in Business Computing.",
+    },
+    {
+      date: 'June 2013',
+      type: 'Baccalaureate',
+      icon: '🎯',
+      title: 'Abouloubaba School',
+      description:
+        'Baccalaureate in Computer Science.',
+    },
+  ];
+
   return (
-    <Fade cascade damping={0.1} duration={3000} direction='right' triggerOnce>
-    <div className='certif' id='certif'>
-        <div className='timeline-section'>
-        <div className="timeline">
-        <h2 className='certifTitle'>Certifications & Diplomas </h2>
+    <section className="certif-section" id="certif">
 
-          {/*first*/}
-          <div className="timeline__event animated fadeInUp delay-2s timeline__event--type2">
-            <div className="timeline__event__icon">
-              {/* <i class="lni-sport"></i>*/}
-            </div>
-            <div className="timeline__event__date">
-              Aout 2023
-            </div>
-            <div className="timeline__event__content">
-              <div className="timeline__event__title">
-              GOMYCODE
-              </div>
-              <div className="timeline__event__description">
-                <p>GOMYCODERS Onboarding/Training : welcoming / Teaching philosophy / Learn and teach </p>
-              </div>
-            </div>
-          </div>
-          {/*second*/}
-       
+      <Fade direction="up" duration={1000} triggerOnce>
+        <div className="certif-heading">
+          <span>MY JOURNEY</span>
+          <h2>Certifications <strong>& Diplomas</strong></h2>
+          <div className="certif-line"></div>
+          <p>
+            My academic background and professional training
+            that shaped my technical skills.
+          </p>
+        </div>
+      </Fade>
 
-          <div className="timeline__event  animated fadeInUp delay-3s timeline__event--type1">
-            <div className="timeline__event__icon ">
-              {/* <i class="lni-sport"></i>*/}
-            </div>
-            <div className="timeline__event__date">
-              July 2023
-            </div>
-            <div className="timeline__event__content ">
-              <div className="timeline__event__title">
-                GOMYCODE
+      <div className="certif-container">
+
+        {certifications.map((certif, index) => (
+
+          <Fade
+            key={index}
+            direction="up"
+            delay={index * 100}
+            duration={800}
+            triggerOnce
+          >
+            <div className="certif-card">
+
+              <div className="certif-card-top">
+                <div className="certif-icon">
+                  {certif.icon}
+                </div>
+
+                <span className="certif-date">
+                  {certif.date}
+                </span>
               </div>
-              <div className="timeline__event__description">
-                <p>FullStack JS Web Bootcamp (ReactJs / NodeJS / Express )</p>
+
+              <span className="certif-type">
+                {certif.type}
+              </span>
+
+              <h3>{certif.title}</h3>
+
+              <p>{certif.description}</p>
+
+              <div className="certif-card-footer">
+                <span className="certif-dot"></span>
+                <span>Completed</span>
               </div>
+
             </div>
-          </div>
-          {/*third*/}
-          <div className="timeline__event animated fadeInUp delay-1s timeline__event--type3">
-            <div className="timeline__event__icon">
-              {/* <i class="lni-sport"></i>*/}
-            </div>
-            <div className="timeline__event__date">
-              Mai 2023
-            </div>
-            <div className="timeline__event__content">
-              <div className="timeline__event__title">
-                INCO Academy/Minassa
-              </div>
-              <div className="timeline__event__description">
-                <p>Go into tech Bootcamp (Wordpress / Audit seo / Marketing Digital / web-design) </p>
-              </div>
-            </div>
-          </div>
-          {/*forth*/}
-          <div className="timeline__event animated fadeInUp timeline__event--type1">
-            <div className="timeline__event__icon">
-              {/* <i class="lni-sport"></i>*/}
-            </div>
-            <div className="timeline__event__date">
-              Septembre 2020 
-            </div>
-            <div className="timeline__event__content">
-              <div className="timeline__event__title">
-                Institut supérieur de gestion Gabes
-              </div>
-              <div className="timeline__event__description">
-                <p>E-commerce Master degree </p>
-              </div>
-            </div>
-          </div>
-          {/*first*/}
-          <div className="timeline__event  animated fadeInUp delay-3s timeline__event--type1">
-            <div className="timeline__event__icon ">
-              {/* <i class="lni-sport"></i>*/}
-            </div>
-            <div className="timeline__event__date">
-              Mai 2016
-            </div>
-            <div className="timeline__event__content ">
-              <div className="timeline__event__title">
-              Institut supérieur de gestion Gabes
-              </div>
-              <div className="timeline__event__description">
-                <p>Basic Bachelor's Degree in Management Computing </p>
-              </div>
-            </div>
-          </div>
-          {/*second*/}
-          <div className="timeline__event animated fadeInUp delay-2s timeline__event--type2">
-            <div className="timeline__event__icon">
-              {/* <i class="lni-sport"></i>*/}
-            </div>
-            <div className="timeline__event__date">
-              June 2013
-            </div>
-            <div className="timeline__event__content">
-              <div className="timeline__event__title">
-                Abouloubaba school 
-              </div>
-              <div className="timeline__event__description">
-                <p>Baccalaureat in computer sciences</p>
-              </div>
-            </div>
-          </div>
-       
-        </div>
-        </div>
-    </div>
-    </Fade>
-  )
+          </Fade>
+
+        ))}
+
+      </div>
+
+    </section>
+  );
 }
 
-export default Certif
+export default Certif;

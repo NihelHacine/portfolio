@@ -16,13 +16,14 @@ function App() {
   }, []);
   return (
     <div>
-      <Navbarr/>
+       <Navbarr/>
       <Header/>
       <About/>
       <Certif/>
       <Project/>
       <Contact/>
       <Footer/>
+     
     </div>
   );
 }

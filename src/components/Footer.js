@@ -1,14 +1,78 @@
-import React from 'react'
-import '../Footer.css'
+
+import React from 'react';
+import '../Footer.css';
 
 function Footer() {
+
+  const currentYear = new Date().getFullYear();
+
   return (
-    <div className='footer'>
-       {/* <h6 style={{padding:'1%'}}>Made with <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/></svg> by Nihel Hacine
-       </h6> */}
-       <h6 style={{padding:'1%'}}>© 2023 Hacine Nihel Portfolio, All Right Reserved</h6>
-    </div>
-  )
+    <footer className="footer">
+
+      <div className="footer-container">
+
+        <div className="footer-brand">
+          <h2>
+            Nihel<span>Hacine</span>
+          </h2>
+
+          <p>
+            Full Stack Web Developer passionate about
+            creating modern and responsive web applications.
+          </p>
+        </div>
+
+        <div className="footer-links">
+          <h3>Quick Links</h3>
+
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#certif">Qualifications</a>
+          <a href="#portfolio">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+
+        <div className="footer-social">
+          <h3>Connect With Me</h3>
+
+          <a
+            href="https://www.linkedin.com/in/nihel-hacine-5456b919a/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            LinkedIn ↗
+          </a>
+
+          <a
+            href="https://github.com/NihelHacine"
+            target="_blank"
+            rel="noreferrer"
+          >
+            GitHub ↗
+          </a>
+
+          <a href="mailto:nihelhacine@gmail.com">
+            Email ↗
+          </a>
+        </div>
+
+      </div>
+
+      <div className="footer-bottom">
+        <p>
+          © {currentYear} <strong>Nihel Hacine</strong>.
+          All Rights Reserved.
+        </p>
+
+        <p>
+          Designed & Developed with
+          <span className="footer-heart"> ♥ </span>
+          by Nihel Hacine
+        </p>
+      </div>
+
+    </footer>
+  );
 }
 
-export default Footer
+export default Footer;
