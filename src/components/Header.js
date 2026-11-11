@@ -49,7 +49,7 @@ function Header() {
               Contact Me
             </a>
 
-            <a href="cv.pdf" className="secondary-btn">
+            <a href="Cv NihelHacine 2026.pdf" className="secondary-btn">
               <FaDownload />
               Download CV
             </a>
